@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pogodynka</string>
+    <string name="prognoza_pogody">Prognoza pogody</string>
+    <string name="dane_meteo">Aktualne warunki</string>
+    <string name="ustawienia">Ustawienia aplikacji</string>
+    <string name="miasto_btn">Szukaj miasta</string>
+</resources>
