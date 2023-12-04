@@ -16,79 +16,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/Nag_prognoza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prognoza_pogody"
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            android:layout_height="match_parent"
+            >
+            <TableLayout
+                android:id="@+id/tabela_prognozy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:stretchColumns="1">
+                <TableRow
+                    android:id="@+id/row1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/prognoza_pogody"
-                    android:textSize="34sp" />
+                    <TextView
+                        android:id="@+id/h1"
+                        android:layout_width="match_parent"
+                        android:text="@string/godzina"
+                        android:padding="10px"/>
 
-                <EditText
-                    android:id="@+id/editTextText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:text="Name" />
-                <Button
-                    android:id="@+id/miasto_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/miasto_btn"/>
-                <TextView
-                    android:id="@+id/cityText"
-                    style="?android:attr/textAppearanceMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#990000"
-                    android:layout_alignParentLeft="true">
-                </TextView>
-                <TextView
-                    android:id="@+id/temp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/cityText"
-                    android:textColor="#000000"
-                    android:textSize="130sp"
-                    android:layout_centerHorizontal="true">
-                </TextView>
-                <TextView
-                    android:id="@+id/unittemp"
-                    android:layout_width="wrap_content"
-                    style="?android:attr/textAppearanceMedium"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/cityText"
-                    android:layout_toRightOf="@id/temp"
-                    android:layout_alignBaseline="@id/temp">
-                </TextView>
-                <TextView
-                    android:id="@+id/skydesc"
-                    android:layout_width="wrap_content"
-                    style="?android:attr/textAppearanceMedium"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/temp"
-                    android:layout_alignStart="@id/temp"
-                    android:layout_toRightOf="@id/temp">
-                </TextView>
-                <!-- Image weather condition -->
-                <ImageView
-                    android:id="@+id/condIcon"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:layout_alignTop="@id/temp"
-                    android:layout_toRightOf="@id/temp"
-                    />
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="match_parent"
+                        android:text="@string/temperatura"
+                        android:padding="10px"/>
 
+                    <TextView
+                        android:id="@+id/w1"
+                        android:layout_width="match_parent"
+                        android:text="@string/wiatr"
+                        android:padding="10px"/>
+
+                </TableRow>
+            </TableLayout>
         </ScrollView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

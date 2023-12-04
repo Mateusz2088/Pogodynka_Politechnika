@@ -4,4 +4,7 @@
     <string name="dane_meteo">Aktualne warunki</string>
     <string name="ustawienia">Ustawienia aplikacji</string>
     <string name="miasto_btn">Szukaj miasta</string>
+    <string name="godzina">Godzina</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="wiatr">Wiatr</string>
 </resources>
