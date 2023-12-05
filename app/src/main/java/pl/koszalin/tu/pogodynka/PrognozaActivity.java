@@ -60,7 +60,6 @@ public class PrognozaActivity extends AppCompatActivity {
             JSONObject forecast = new JSONObject(inputData);
             JSONArray listFromForecast = forecast.getJSONArray("list");
             int forecastLenght = listFromForecast.length();
-            TableRow[] wiersze = new TableRow[forecastLenght];
             TableLayout tabela = (TableLayout) findViewById(R.id.tabela_prognozy);
             for (int i=0; i<forecastLenght;i++){
                 //dodawanie pól tekstowych
