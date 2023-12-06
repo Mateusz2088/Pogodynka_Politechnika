@@ -4,6 +4,7 @@ package pl.koszalin.tu.pogodynka;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TableLayout;
@@ -33,10 +34,14 @@ public class PrognozaActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prognoza);
-
-        getData("Koszalin,pl");
+        getData(getCity());
+        //getData("Koszalin,pl");
     }
 
+    private String getCity(){
+        Intent intent = getIntent();
+        return intent.getStringExtra("miasto");
+    }
     private void getData(String cityName){
         String url = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=metric&appid=3dbe58c7f23716bce28db7e662c85f86";
         mRequestQueue = Volley.newRequestQueue(this);

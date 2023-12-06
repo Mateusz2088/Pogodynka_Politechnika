@@ -3,6 +3,7 @@ package pl.koszalin.tu.pogodynka;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class ActualInStationActivity extends AppCompatActivity {
     public void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_station);
-        getData("Koszalin");
+        getData(getCity());
     }
 
     private void getData(String cityName){
@@ -49,7 +50,10 @@ public class ActualInStationActivity extends AppCompatActivity {
 
         requestQueue.add(stringRequest);
     }
-
+    private String getCity(){
+        Intent intent = getIntent();
+        return intent.getStringExtra("miasto");
+    }
     private void showWeather(String inputJSON) {
         try {
             JSONObject weather = new JSONObject(inputJSON);
