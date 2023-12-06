@@ -28,6 +28,10 @@
             android:name=".PrognozaActivity"
             android:label="@string/prognoza_pogody"
             android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ActualInStationActivity"
+            android:label="@string/dane_meteo"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

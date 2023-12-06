@@ -22,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PrognozaActivity.class));
             }
         });
+        Button btn_aktualne = (Button) findViewById(R.id.button_aktualne);
+        btn_aktualne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ActualInStationActivity.class));
+            }
+        });
     }
 
 }

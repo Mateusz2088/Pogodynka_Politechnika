@@ -7,4 +7,8 @@
     <string name="godzina">Godzina</string>
     <string name="temperatura">Temperatura</string>
     <string name="wiatr">Wiatr</string>
+    <string name="miejscowosc">Miejscowość</string>
+    <string name="czas_wykonania_pomiaru">Czas wykonania pomiaru</string>
+    <string name="loading">Ładowanie danych ...</string>
+    <string name="preasure">Ciśnienie</string>
 </resources>
