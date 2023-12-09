@@ -39,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(actualIntent);
             }
         });
+        Button btn_settings = (Button) findViewById(R.id.button_settings);
+        btn_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AutoCompleteTextView miasto = (AutoCompleteTextView) findViewById(R.id.Miasto_input);
+                Intent actualIntent = new Intent(MainActivity.this,SettingsActivity.class);
+                actualIntent.putExtra("miasto",miasto.getText().toString());
+                startActivity(actualIntent);
+            }
+        });
     }
 
 }
